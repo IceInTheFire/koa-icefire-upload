@@ -19,8 +19,8 @@ router.get('/', (ctx, next) => {
 });
 router.post('/', async (ctx, next) => {
 
-    let extendsions = ['png', 'jpeg', 'gif'];
-    let filePath = path.join(__dirname, 'imgs/');
+    let extendsions = ['png', 'jpeg', 'gif', 'jpg'];        // 清一色小写
+    let filePath = path.join(__dirname, 'imgs/');       // 确保目录存在，否则报错
     let params = await icefireUpload({ctx, extendsions, filePath});
     ctx.body = params;
 });

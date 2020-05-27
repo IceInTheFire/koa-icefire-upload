@@ -1,6 +1,6 @@
 {
   "name": "koa-icefire-upload",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,8 @@
   "author": "icefire",
   "license": "ISC",
   "dependencies": {
-    "busboy": "^0.3.1"
+    "busboy": "^0.3.1",
+    "koa": "^2.12.0",
+    "koa-router": "^8.0.8"
   }
 }

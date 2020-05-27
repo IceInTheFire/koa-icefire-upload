@@ -10,8 +10,8 @@ yarn add koa-icefire-upload
 ```js
 const {icefireUpload} = require('koa-icefire-upload');
 router.post('/', async (ctx, next) => {
-    let extendsions = ['png', 'jpeg', 'gif'];       // 只允许这几个后缀上传
-    let filePath = path.join(__dirname, 'imgs/');   // 上传到当前目录的imgs文件夹下
+    let extendsions = ['png', 'jpeg', 'gif', 'jpg'];        // 清一色小写    允许的文件后缀
+    let filePath = path.join(__dirname, 'imgs/');       // 确保目录存在，否则报错, 文件上传到此目录
     let params = await icefireUpload({ctx, extendsions, filePath});
     ctx.body = params;      // 这里就是上传的信息
 });
@@ -21,12 +21,12 @@ router.post('/', async (ctx, next) => {
 [
   {
     "fieldname": "textfield",
-    "type": "text",
+    "type": "text",     // 参数类型, 普通参数text，
     "val": "111"        //普通参数
   },
   {
     "fieldname": "filefield",
-    "type": "file",
+    "type": "file",     // 参数类型, 文件参数text，
     "errorMsg": "格式不规范"
   }
 ]
