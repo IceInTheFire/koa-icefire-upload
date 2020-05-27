@@ -20,14 +20,20 @@ router.post('/', async (ctx, next) => {
 ```
 [
   {
-    "fieldname": "textfield",
+    "fieldname": "textfield",      // 参数字段
     "type": "text",     // 参数类型, 普通参数text，
     "val": "111"        //普通参数
   },
   {
-    "fieldname": "filefield",
-    "type": "file",     // 参数类型, 文件参数text，
+    "fieldname": "filefield",      // 参数字段
+    "type": "file",     // 参数类型, 文件参数file，
     "errorMsg": "格式不规范"
+  },
+ {
+    "type": "file",    // 参数类型, 文件参数file，
+    "imgPath": "//Users/xxx/koa-icefire-upload/example/imgs//111.jpg",      // 服务器地址
+    "imgKey": "111.jpg",        // 文件名称
+    "fieldname": "filefield"        // 参数字段
   }
 ]
 ```
